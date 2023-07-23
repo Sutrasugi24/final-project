@@ -22,9 +22,9 @@
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: .90rem;
+  --small-font-size: .85rem;
+  --smaller-font-size: .80rem;
 
   /*========== Font weight ==========*/
   --font-medium: 500;
@@ -872,12 +872,13 @@ img {
 .footer__link:hover,
 .footer__social-link:hover {
   color: var(--title-color);
+  font-size: 1.5rem;
 }
 
 .footer__social {
   display: flex;
   column-gap: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 .footer__social-link {
@@ -888,7 +889,7 @@ img {
   display: block;
   margin-top: 4.5rem;
   text-align: center;
-  font-size: var(--smaller-font-size);
+  font-size: 1rem;
   color: var(--text-color-light);
 }
 
