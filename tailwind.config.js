@@ -16,8 +16,9 @@ module.exports = {
       colors:{
         primary: '#18A4E0',
         secondary: '#D3DDE6',
-        dark: '#323039',
-        light: '#FAF8F0'
+        dark: '#393c41',
+        light: '#FAF8F0',
+
       },
       backgroundImage:{
         'backgroundCover': url('/dist/img/marek-piwnicki-jFukTjphXbI-unsplash.jpg')

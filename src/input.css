@@ -1,70 +1,486 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Nunito+Sans&family=Spectral:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-
-html{
-    scroll-behavior: smooth;
-    scroll-padding: 3rem;
-}
-h1, h2, h3, h4, h5, h6{
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-span{
-    font-family: 'Alegreya', serif;
-}
-
-p{
-    font-family: 'Spectral', serif;
-}
-
-.title{
-    @apply mb-3 pt-2 text-2xl text-center my-auto font-extrabold tracking-tight leading-none text-primary md:text-3xl lg:text-4xl;
-}
-
-.navbar-fixed{
-    @apply fixed z-[9999] bg-dark bg-opacity-60;
-    backdrop-filter: blur(5px);
-    box-shadow: inset 0 -1px 0 0 rgba(255, 255, 255, 0.2)
-}
-
-
-.hamburger-line{
-    @apply w-[30px] h-[2px] my-2 block bg-light;
-}
-
-.hamburger-active > span:nth-child(1){
-    @apply rotate-45;
-}
-
-.hamburger-active > span:nth-child(2){
-    @apply scale-0;
-}
-
-.hamburger-active > span:nth-child(3){
-    @apply -rotate-45;
-}
-
-.link-href{
-    @apply text-base text-light py-2 mx-8 flex group-hover:text-primary;
-}
-
-@layer components{
-    .timeline-img{
-        @apply h-24 w-24 object-cover rounded-full shadow-md border-4 border-light xs:absolute md:mx-auto md:left-0 md:right-0;
+html {
+    font-size: 62.5%;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  @media (max-width: 600px) {
+    html {
+      font-size: 55%;
     }
-    .timeline-container{
-        @apply relative pt-2 xs:pl-28 xs:pt-0 md:w-1/2 md:ml-auto md:pl-16;
+  }
+  
+@layer components {
+.snap-feature {
+    @apply snap-y snap-mandatory h-screen overflow-scroll scroll-smooth transition-all duration-500;
+}
+
+.side-nav {
+    @apply bg-white transition-all duration-700 fixed top-0 right-[-100%] w-1/2 md:w-1/6 h-screen z-30 p-10 shadow-2xl;
+}
+
+.close-icon {
+    @apply w-12 h-12 duration-500 hover:bg-slate-200 rounded-full p-1 cursor-pointer;
+}
+
+.nav-bar {
+    @apply flex justify-between w-full fixed top-0 z-10 h-28 px-10 items-center;
+}
+
+.nav-items {
+    @apply text-2xl font-semibold py-2 px-3 mt-5 rounded-[1.2rem] md:bg-transparent duration-500 bg-opacity-40 hover:bg-slate-300 hover:bg-opacity-50 outline-none;
+}
+
+.car-section {
+    @apply w-full h-screen relative snap-always snap-start;
+}
+
+.car-img {
+    @apply w-full h-screen object-cover;
+}
+
+.car-details {
+    @apply absolute top-[20%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center;
+}
+
+.car-name {
+    @apply text-[4rem] text-slate-800 font-semibold;
+}
+
+.car-tagline {
+    @apply text-2xl text-slate-800;
+}
+
+.car-buttons {
+    @apply absolute bottom-[15%] left-[50%] translate-x-[-50%] translate-y-[-50%] flex flex-col md:flex-row;
+}
+
+.btn {
+    @apply inline-block text-xl text-white bg-gray-700 px-10 pt-4 mx-2 my-2 font-medium text-center rounded-[10rem] uppercase w-[25rem] h-16;
+}
+
+.inventory {
+    @apply bg-slate-100 text-gray-900;
+}
+
+.down-arrow {
+    @apply absolute bottom-[6%] left-[50%] translate-x-[-50%] translate-y-[-50%];
+}
+}
+
+
+/* body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    background: #161616;
+}
+
+h1, h2{
+    font-weight: 300;
+}
+
+h1{
+    margin: 0.5em 0;
+    font-size: 3em;
+}
+
+.specs h1, .about h2{
+    font-size: 2em;
+    padding-left: 1.2em;
+    border-left: 0.1em #5bc7ca solid;
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+section{
+    padding: 2.5em;
+}
+
+nav, .infos, .info, .specs-header, .specs li, .stats{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.specs, .icon, .panel:first-child, .panel:last-child{
+    display: flex;
+    justify-content: center;
+}
+
+header{
+    height: 100vh;
+    min-height: 30em;
+    background: url("/dist/img/hero-banner.jpg") no-repeat center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    padding: 1.5em 2.5em;
+    position: relative;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.brand{
+    font-size: 1.3em;
+}
+
+nav li{
+    display: inline-block;
+    margin: 0 0.8em;
+    text-align: center;
+}
+
+nav a{
+    color: #fff;
+
+}
+
+nav a:hover{
+    color: #eee;
+} */
+
+
+/* Header Body */
+/* .header-body{
+    padding: 2.5em;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.header-body p{
+    max-width: 25em;
+} */
+
+
+/*  About Section */
+
+/* .heading h2{
+    margin-bottom: 1em;
+}
+
+.heading p{
+    margin-left: 3em;
+    display: inline-block;
+}
+
+
+.infos{
+    gap: 2em;
+}
+
+.infos, .heading{
+    padding: 5em 1em;
+}
+
+.info img{
+    max-width: 6em;
+    margin-right: 1em;
+}
+
+.info h3{
+    margin-bottom: 0.5em;
+}
+
+.info p{
+    max-width: 15em;
+}
+
+
+.specs {
+    background: url("/dist/img/banner-2.jpg") no-repeat center;
+    background-size: cover;
+    min-height: 40em;
+    position: relative;
+    padding-top: 8em;
+}
+
+.specs-header, .specs ul{
+    position: relative;
+    z-index: 1;
+}
+
+.specs ul{
+    width: 40em;
+    margin-top: 3em;
+}
+
+.specs li{
+    padding: 0.6em 0;
+    border-bottom: #555 1px solid;
+}
+
+.specs li span:first-child{
+    color: #888;
+} */
+
+
+/* Panel Section */
+/* .panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 40em;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 8em;
+}
+
+.panel > div{
+    padding: 1em;
+}
+
+.panels-sm{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.panel:first-child, .panel:last-child{
+    padding: 1em;
+}
+
+.panel:first-child{
+    background: #5bc7ca;
+}
+
+.panel:last-child{
+    background: #fff;
+    color: #555;
+}
+
+.panel:nth-child(2){
+    background: url("/dist/img/panel1.jpg") no-repeat center;
+}
+
+.panel:nth-child(3){
+    background: url("/dist/img/panel2.jpg") no-repeat center;
+}
+
+.panel:nth-child(2), .panel:nth-child(3){
+    background-size: cover;
+    position: relative;
+}
+
+.specs::before,
+.panel:nth-child(2)::before,
+.panel.panel:nth-child(3)::before{
+    content: '';
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.panel h2{
+    margin: 0.7em 0;
+}
+
+.panel-lg{
+    background: url("/dist/img/panel3.jpg") no-repeat center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.icon{
+    font-size: 2em;
+    border-radius: 50%;
+    width: 1.5em;
+    height: 1.5em;
+} */
+
+
+/* Stats Section */
+/* .car-stats{
+    padding: 5em 1em;
+}
+
+.stats{
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.stats > div {
+    margin-bottom: 1em;
+    position: relative;
+    min-width: 10em;
+}
+
+.stats > div h1:nth-child(2){
+     color: #282828;
+     position: absolute;
+     top:30%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     z-index: -1;
+     font-size: 2.5em;
+     font-weight: 700;
+}
+
+.stats h5{
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 0.7em;
+}
+
+.counter{
+    margin: 0.1em 0;
+}
+
+.car{
+    padding: 4em 1em 4em 1em;
+    margin-top: 8em;
+}
+
+.circle{
+    border: 2px #ccc solid;
+    border-radius: 50%;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    background: #161616;
+    animation: glow 4s ease-in-out infinite;
+    aspect-ratio: 3 / 1;
+}
+
+.car img{
+    width: 70%;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.circle div{
+    border: inherit;
+    border-radius: inherit;
+    background: inherit;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: inherit;
+}
+
+.circle .inner-md-circle{
+    width: 75%;
+    height: 75%;
+    top: 10%;
+    animation-delay: 3s;
+}
+
+.circle .inner-sm-circle{
+    width: 50%;
+    height: 50%;
+    top: 20%;
+    animation-delay: 6s;
+}
+
+
+@keyframes glow{
+    0%{
+        box-shadow: none;
     }
-    .timeline-container-left{
-        @apply md:ml-0 md:mr-auto md:pl-0 md:pr-16;
+    50%{
+        box-shadow: 0 0 1em #5bc7ca;
     }
-    .timeline-pointer{
-        @apply absolute inset-0 left-10 h-4 w-4 transform rotate-45 bg-light xs:top-10 xs:left-26 md:left-14;
+    100%{
+        box-shadow: none;
     }
-    .timeline-pointer-left{
-        @apply md:left-auto md:right-14;
+} */
+
+
+/* Responsive */
+
+/* @media screen and (max-width: 900px){
+    .menu-btn{
+        display: block;
+        font-size: 1.2em;
+        cursor: pointer;
+    }
+    .menu-btn:hover{
+        color: #eee;
+    }
+    .brand, .menu-btn{
+        position: relative;
+        z-index: 1;
+    }
+
+    .menu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0;
+        background: #161616;
+        width: 100%;
+        z-index: 0;
+        height: 0;
+        overflow-y: hidden;
+        transition: 0.6s ease-in-out;
+    }
+
+    .menu-open{
+        height: 17em;
+        padding: 5em 0 1em 0;
+    }
+
+    .menu li{
+        display: block;
+        margin: 1em 0;
+    }
+
+    .specs ul{
+        width: 80vw;
+    }
+
+    .infos, .info, .stats{
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+    .infos{
+        gap: 3em;
+    }
+    .info img{
+        margin: 0 0 1em 0;
+    }
+    .panel, .panels-sm{
+        grid-template-columns: 1fr;
+    }
+    .panel, .panel-lg{
+        min-height: 15em;
+    }
+    .panel:nth-child(2){
+        order: 1;
     }
 }
+
+@media screen and (max-width:600px) {
+    html{
+        font-size: 14px;
+    }
+    
+} */
