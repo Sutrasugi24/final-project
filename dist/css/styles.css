@@ -1288,13 +1288,13 @@ img {
 }
 
 .discover__title {
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   margin-bottom: 1rem;
 }
 
 .discover__description {
   display: block;
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
 }
 
 .discover__img {
