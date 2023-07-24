@@ -113,6 +113,12 @@ img {
   overflow: hidden;
 }
 
+.shape__hero {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .shape {
   background-color: hsla(219, 33%, 32%, .5);
   filter: blur(112px);
@@ -395,6 +401,7 @@ img {
 
 .about__img {
   width: 310px;
+  height: fit-content;
   border-radius: .5rem;
 }
 
