@@ -1129,7 +1129,7 @@ nav a:hover{
     
 } */
 
-@media (min-width: 480px) {
+@media (min-width: 350px) {
   .xs\:bg-left {
     background-position: left;
   }
